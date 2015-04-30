@@ -1,0 +1,18 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Food Nutrition</title>
+</head>
+<body>
+{% for nutrition in foods %}
+    <table>
+        <tr><strong>{{ nutrition.User }}</strong></tr>&nbsp;
+        <tr><a href="/single/{{nutrition.id}}">{{ nutrition.Name_of_food }}</a></tr>&nbsp;
+        <tr>{{ nutrition.Date_of_entry }}</tr>
+    </table>
+{% endfor %}
+
+</body>
+</html>
